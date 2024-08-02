@@ -1,20 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ClientList.css';
+import AddClientModal from '../../ajouter/AddClientModal';
 
 const ClientList = () => {
+
+const [open , setOpen] =useState(false)
+
+
+const openModal = () => {
+  setOpen((perv) => !perv)
+}
+
   return (
-    <div className="client-list">
+    <>
+  <div className="client-list">
       <div className="client-list-header">
         <h2>إدارة الموكلين</h2>
       </div>
 
-      <div className='ness'>
+
+    <div className='ness'>
       <div className="client-list-actions">
         <select className='tasdir_lbayanat'>
         <option>تصدير البيانات</option>
         </select> 
         <button className='hadf'>حذف</button>
-        <button className='idafat_mowakil'>إضافة موكل</button>
+        <button className='idafat_mowakil' onClick={openModal}>إضافة موكل</button>
       </div>
       <div className="filter-sort">
         <button className='baht'>الفلاتر</button>
@@ -30,10 +41,10 @@ const ClientList = () => {
       </div>
 
       <div className='tableau'>
-
       <table>
         <thead>
           <tr>
+            <th><input type='checkbox'/></th> 
             <th>الرمز</th>
             <th>الاسم الكامل</th>
             <th>الهاتف</th>
@@ -50,8 +61,13 @@ const ClientList = () => {
         <span>1</span>
         <button className='liman'>&gt;</button>
       </div>
-      </div>
     </div>
+  </div>
+
+  {open ? <AddClientModal close={openModal}/>
+  :
+  null}
+  </>
   );
 };
 
