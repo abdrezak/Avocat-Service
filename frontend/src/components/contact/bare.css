@@ -1,0 +1,43 @@
+.Bare {
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    text-align: right;
+    display: flex;
+  }
+  
+  .Bare-header {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c7652d;
+    color: white;
+    padding: 10px 20px;
+    width: 30%;
+
+  }
+  
+  .Bare-logo {
+    width: 50px;
+  }
+  
+  .Bare-nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    display: grid;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-avatar {
+    width: 30px;
+    margin-left: 10px;
+  }
+  .kolchi {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+  }
+  

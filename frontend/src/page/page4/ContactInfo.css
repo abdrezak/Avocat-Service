@@ -1,0 +1,67 @@
+.contact-info {
+    font-family: 'Arial, sans-serif';
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .contact-info1 {
+    color: #000;
+    font-weight: bold;
+    direction: ltr
+  }
+  
+  .info-box {
+    border: 2px solid rgb(0, 0, 0);
+    padding: 20px;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 8px;
+    color: #000;
+  }
+  
+  .info-item {
+    margin: 10px 0;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    padding: 0px 10px;
+    color: #000;
+    font-weight: bold;
+  }
+
+  .info-item1 {
+  font-weight: bold;
+    direction: ltr;
+    color: #000;
+  }
+
+  .email {
+    font-weight: bold;
+    direction: ltr;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 8px;
+    color: #000;
+  }
+
+  .info-item2{
+    font-weight: bold;
+    direction: ltr;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    color: #000;
+  }
+
+  .info-item3 {
+    font-weight: bold;
+      direction: ltr;
+      color: #000;
+  }
+
+  .info-item4{
+      font-weight: bold;
+      direction: ltr;
+      border: 2px solid rgb(0, 0, 0);
+      border-radius: 8px;
+      color: #000;
+  }
+  
