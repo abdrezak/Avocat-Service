@@ -1,54 +1,49 @@
 import React from 'react';
 import './FileTracking.css';
-import Top from '../../components/top/Top';  // Import the Top component
 
 const FileTracking = ({ showTop, onShowTop, onHideTop }) => {
   return (
-    <div className='tatabo3-section'>
-      <h1 className="title">تتبع الملفات</h1>
-      <div className='containers'>
-        <div className="container">
-          <main>
-            <section className="search-section">
-              <div className="form">
-                <div className="form-group1">
-                  <label className="label1">البحث عن :</label>
-                  <button className="input1">ملف التنفيذ على شركات التأمين</button>
-                </div>
-                <div className="form-group">
-                  <label className="label">المحكمة :</label>
-                  <select className="select1">
-                    <option>اختيار محكمة الاستئناف</option>
-                  </select>
-                  <select className="select">
-                    <option>اختيار المحكمة الابتدائية</option>
-                  </select>
-                </div>
-              </div>
-            </section>
-          </main>
+    <div className="file-tracking">
+      <h1>تتبع الملفات</h1>
+      <div className="search-section">
+        <div className="search-row">
+          <label>البحث عن :</label>
+          <input type="text" placeholder="ملف التنفيذ على شركات التأمين" className="search-input" />
         </div>
-
-        {!showTop ? (
-          <div className="container1">
-            <div className="form-group2">
-              <button className="input-button1">رقم التنفيذ</button>
-              <button className="input-button" onClick={onShowTop}>متعدد الخصائص</button>
-            </div>
-            <div className="file-number">
-              <label className="labelé">الرقم الكامل للملف :</label>
-              <input type="text" className="input-sana" placeholder="رقم الملف" />
-              <input type="text" className="input-ramz" placeholder="رمز الملف"/>
-              <input type="text" className="input-year" placeholder="السنة" />
-              <button className="search-btn">بحث</button>
-            </div>
+        <div className="search-row">
+          <label>المحكمة :</label>
+          <div className="checkbox-group">
+            <label className="checkbox-label">
+              <input type="checkbox" />
+              اختيار محكمة الاستئناف
+            </label>
+            <label className="checkbox-label">
+              <input type="checkbox" />
+              اختيار المحكمة الابتدائية
+            </label>
           </div>
-        ) : (
-          <Top onHideTop={onHideTop} />
-        )}
+        </div>
+      </div>
+      <div className="file-details-section">
+        <div className="button-row">
+          <button className="secondary-button">رقم التنفيذ</button>
+          <button className="primary-button">متعدد الخصائص</button>
+        </div>
+        <div className="file-number-row">
+          <label>الرقم الكامل للملف :</label>
+          <div className="file-number-input">
+            <input type="text" placeholder="رقم الملف" />
+            <input type="text" placeholder="رمز الملف" />
+            <input type="text" placeholder="السنة" />
+          </div>
+          <button className="search-button">بحث</button>
+        </div>
+    ) : (
+       <top onHideTo={onHideTop} />
+    )}
       </div>
     </div>
   );
-}
+};
 
 export default FileTracking;
