@@ -37,7 +37,7 @@ const Sidebar = () => {
         <button className="logout-btn">Log Out</button>
       )}
     </div>
-    <main>
+    <main className='wloo'>
     <ClientList />
     </main>
     </div>

@@ -1,17 +1,23 @@
 /* Sidebar.css */
 .sidebar {
-    background-color: #1e1e1e;
+    background-color: #000000;
     color: white;
-    width: 60px;
+    width: 100px;
     height: 100vh;
     transition: width 0.3s ease;
     overflow: hidden;
+  }
+
+  .wloo {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
   }
   
 .all{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: rgb(255, 255, 255);
 }
 
   .sidebar.expanded {
@@ -66,7 +72,6 @@
   .logout-btn {
     position: absolute;
     bottom: 20px;
-    left: 20px;
     right: 20px;
     background-color: #d32f2f;
     color: white;
